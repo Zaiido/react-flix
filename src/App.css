@@ -338,7 +338,6 @@ section:not(:first-of-type):hover .explore i {
 
 .carousel {
   margin-right: -80px;
-  margin-left: 0.8rem;
 }
 
 .carousel-inner {
@@ -352,7 +351,6 @@ section:not(:first-of-type):hover .explore i {
 
 .carousel-control-prev {
   width: 80px;
-  left: -15px;
 }
 
 .carousel-control-next:hover {
