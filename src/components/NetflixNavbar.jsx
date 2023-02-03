@@ -9,7 +9,7 @@ class NetflixNavbar extends Component {
             <Navbar expand="lg" variant="dark" className="px-5">
                 <Container fluid>
                     <Navbar.Brand href="#home">
-                        <img src={'./assets/netflix_logo.png'} alt="Netflix Logo" />
+                        <img src='./assets/netflix_logo.png' alt="Netflix Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
