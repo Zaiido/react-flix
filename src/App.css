@@ -416,3 +416,37 @@ footer button:focus {
   background-color: transparent !important;
   border-color: gray !important;
 }
+
+
+@media (max-width: 560px) {
+
+  .row .col-12:nth-child(2),
+  .row .col-12:nth-child(3),
+  .row .col-12:nth-child(4),
+  .row .col-12:nth-child(5),
+  .row .col-12:nth-child(6) {
+    display: none;
+  }
+
+}
+
+@media (min-width: 561px) and (max-width: 767px) {
+
+  .row .col-12:nth-child(3),
+  .row .col-12:nth-child(4),
+  .row .col-12:nth-child(5),
+  .row .col-12:nth-child(6) {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .row .col-12:nth-child(4),
+  .row .col-12:nth-child(5),
+  .row .col-12:nth-child(6) {
+    display: none;
+  }
+
+}
