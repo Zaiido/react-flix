@@ -12,17 +12,17 @@ class TrendingNowSection extends Component {
                         </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="james%20bond" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="twilight" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="harry%20potter" />
                                 </Row>
                             </Carousel.Item>

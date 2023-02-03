@@ -12,17 +12,17 @@ class NewReleases extends Component {
                         </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="shrek" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="star%20wars" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="iron%20man" />
                                 </Row>
                             </Carousel.Item>

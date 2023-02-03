@@ -12,17 +12,17 @@ class WatchItAgain extends Component {
                         </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="alien" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="spider%20man" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
-                                <Row>
+                                <Row className="movies-container">
                                     <BuildingGallery query="transformers" />
                                 </Row>
                             </Carousel.Item>
