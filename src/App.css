@@ -347,10 +347,12 @@ section:not(:first-of-type):hover .explore i {
 .carousel-control-next {
   width: 80px;
   right: 0px;
+  z-index: 0;
 }
 
 .carousel-control-prev {
   width: 80px;
+  z-index: 0;
 }
 
 .carousel-control-next:hover {
