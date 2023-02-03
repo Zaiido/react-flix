@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Alert, Card, Col, Spinner } from "react-bootstrap";
-import { PlusLg, HandThumbsUp, ChevronDown, VolumeUp } from "react-bootstrap-icons";
+import { PlusLg, HandThumbsUp, ChevronDown, VolumeUp, BugFill } from "react-bootstrap-icons";
 
 
 class BuildingGallery extends Component {
@@ -31,11 +31,12 @@ class BuildingGallery extends Component {
 
     render() {
         return (
-            this.state.movies.splice(0, 6).map((movie) => {
-                return (
-                    <>
-                        {this.state.isLoading && <Spinner animation="border" variant="danger" />}
-                        {this.state.isError && <Alert variant="danger">Oww snap...Something went wrong 😐</Alert>}
+            <>
+                {this.state.isLoading && <Spinner className="spinner" animation="border" variant="danger" />}
+                {this.state.isError && <Alert className="error" variant="danger">Oww snap...<BugFill /> </Alert>}
+                {this.state.movies.splice(0, 6).map((movie) => {
+                    return (
+
                         <Col className="col-12 col-sm-6 col-md-4 col-lg-2 movie-img" key={movie.imdbID}>
                             <Card className="border-0">
                                 <Card.Img variant="top" src={movie.Poster} />
@@ -65,14 +66,13 @@ class BuildingGallery extends Component {
                                     <div className="text-white genre">
                                         Mistery · Action
                                     </div>
-
                                 </Card.Body>
                             </Card>
                         </Col>
-                    </>
-                )
-            })
-        )
+
+                    )
+                })}
+            </>)
     }
 }
 

@@ -197,6 +197,7 @@ footer a:hover {
 }
 
 .service-btn {
+  margin-left: 10px;
   background-color: transparent;
   border: 1px solid gray;
   border-radius: 0 !important;
@@ -449,4 +450,18 @@ footer button:focus {
     display: none;
   }
 
+}
+
+.spinner {
+  position: absolute;
+  z-index: 3;
+  left: 45%;
+  top: 40%;
+}
+
+.error {
+  position: absolute;
+  z-index: 3;
+  left: 42%;
+  margin-top: -25px;
 }

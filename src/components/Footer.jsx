@@ -58,7 +58,7 @@ class Footer extends Component {
                             <Button className="service-btn">Service Code</Button>
                         </Col>
                     </Row>
-                    <Row className="mx-5 mt-3">
+                    <Row className="mx-5 mt-3 icons">
                         <Col>
                             <span> © 1997-2023 Netflix, Inc.</span>
                         </Col>
