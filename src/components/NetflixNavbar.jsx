@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Container, Navbar, Nav, Form, Button } from "react-bootstrap";
-import { Search } from "react-bootstrap-icons";
+import { Bell, Search } from "react-bootstrap-icons";
 
 
 class NetflixNavbar extends Component {
@@ -24,7 +24,7 @@ class NetflixNavbar extends Component {
                             <Button><Search /></Button>
                             <Button className="text-white text-decoration-none mr-2">KIDS</Button>
                             <Button className="btn my-2 my-sm-0 text-white mr-2" type="submit">
-                                <i className="bi bi-bell"></i>
+                                <Bell />
                             </Button>
                             <div className="text-white mr-2 profile d-flex align-items-center">
                                 <img className="mr-2" src="./assets/avatar.png" alt="Avatar Img" />
