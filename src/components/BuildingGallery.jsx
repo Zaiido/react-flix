@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Alert, Card, Col, Spinner } from "react-bootstrap";
+import { Alert, Button, Card, Col, Spinner } from "react-bootstrap";
 import { PlusLg, HandThumbsUp, ChevronDown, VolumeUp, BugFill } from "react-bootstrap-icons";
+import routerWrapper from "../helper/routerWrapper";
 
 
 class BuildingGallery extends Component {
@@ -9,6 +10,7 @@ class BuildingGallery extends Component {
         isLoading: true,
         isError: false
     }
+
 
     componentDidMount() {
         this.getMovies()
@@ -47,9 +49,9 @@ class BuildingGallery extends Component {
                                     </div>
                                     <div className="d-flex">
                                         <div className="d-flex">
-                                            <div className="icon mr-2 icon-special">
+                                            <Button className="icon mr-2 icon-special" onClick={() => { this.props.navigate("/movie-details/" + movie.imdbID) }}>
                                                 <div className="right-triangle"></div>
-                                            </div>
+                                            </Button>
                                             <div className="icon mr-2"><PlusLg /></div>
                                             <div className="icon mr-2"><HandThumbsUp /></div>
                                         </div>
@@ -76,4 +78,4 @@ class BuildingGallery extends Component {
     }
 }
 
-export default BuildingGallery
+export default routerWrapper(BuildingGallery)

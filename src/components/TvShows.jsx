@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Container, Dropdown, DropdownButton } from "react-bootstrap";
+import { Carousel, Container, Dropdown, DropdownButton, Row } from "react-bootstrap";
+import BuildingGallery from "./BuildingGallery";
 
 class TvShows extends Component {
     render() {
@@ -35,6 +36,63 @@ class TvShows extends Component {
                                 </svg>
                             </div>
                         </div>
+                    </div>
+                    <div className="align-container">
+                        <Carousel interval={null} indicators={false}>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="friends" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="transformers" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="breaking bad" />
+                                </Row>
+                            </Carousel.Item>
+                        </Carousel>
+                    </div>
+                    <div className="align-container my-5">
+                        <Carousel interval={null} indicators={false}>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="Pirates of the Caribbean" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="baby boss" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="office" />
+                                </Row>
+                            </Carousel.Item>
+                        </Carousel>
+                    </div>
+                    <div className="align-container my-5">
+                        <Carousel interval={null} indicators={false}>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="snow white" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="cinderella" />
+                                </Row>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <Row className="movies-container">
+                                    <BuildingGallery query="mulan" />
+                                </Row>
+                            </Carousel.Item>
+                        </Carousel>
                     </div>
                 </Container>
             </section >

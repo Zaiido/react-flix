@@ -23,6 +23,10 @@ nav {
   padding-right: 1.8rem;
 }
 
+.navbar a:hover {
+  text-decoration: none;
+}
+
 .navbar-dark .navbar-nav .nav-link:not(:first-child):hover {
   color: #b3b3b3;
 }
@@ -431,4 +435,59 @@ footer button:focus {
   z-index: 3;
   left: 42%;
   margin-top: -25px;
+}
+
+.card button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.card button:active {
+  background-color: white !important;
+  border-color: white !important;
+}
+
+.list-group-item {
+  background-color: #141414;
+  border-color: white;
+}
+
+.page-not-found {
+  height: calc(100vh - 74px);
+  background-image: url("https://images.unsplash.com/photo-1521583765181-7dd5f8fc5c5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1211&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00000063;
+}
+
+.not-found-content {
+  min-height: calc(100vh - 74px);
+}
+
+.not-found-content h1,
+h3,
+h4 {
+  position: relative;
+  z-index: 2;
+}
+
+.not-found-content h4 {
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.not-found-content h1 {
+  font-weight: bold;
+  font-size: 70px;
 }
