@@ -38,6 +38,9 @@ class TvShows extends Component {
                         </div>
                     </div>
                     <div className="align-container">
+                        <div className="d-flex align-items-center mb-3 explore">
+                            <h3 className="font-weight-bolder mr-2">Top movies</h3>
+                        </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
                                 <Row className="movies-container">
@@ -57,6 +60,9 @@ class TvShows extends Component {
                         </Carousel>
                     </div>
                     <div className="align-container my-5">
+                        <div className="d-flex align-items-center mb-3 explore">
+                            <h3 className="font-weight-bolder mr-2">Watch It Again</h3>
+                        </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
                                 <Row className="movies-container">
@@ -76,6 +82,9 @@ class TvShows extends Component {
                         </Carousel>
                     </div>
                     <div className="align-container my-5">
+                        <div className="d-flex align-items-center mb-3 explore">
+                            <h3 className="font-weight-bolder mr-2">Your list</h3>
+                        </div>
                         <Carousel interval={null} indicators={false}>
                             <Carousel.Item>
                                 <Row className="movies-container">
