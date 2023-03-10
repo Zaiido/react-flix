@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Alert, Container, ListGroup, Spinner } from "react-bootstrap"
+import { Alert, Container, Spinner } from "react-bootstrap"
 import { BugFill } from "react-bootstrap-icons"
 import { useParams } from "react-router-dom"
 
