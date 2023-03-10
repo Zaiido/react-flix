@@ -7,20 +7,20 @@ const MovieDetails = () => {
     const params = useParams()
 
     const [movie, setMovie] = useState(null)
-    const [comments, setComments] = useState(null)
+    // const [comments, setComments] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [isError, setIsError] = useState(false)
 
 
     useEffect(() => {
         getData();
-        getComments();
+        // getComments();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getData = async () => {
         try {
-            let response = await fetch("http://www.omdbapi.com/?apikey=f26f50a5&i=" + params.movieId)
+            let response = await fetch(`${process.env.REACT_APP_BE_URL}/medias/${params.movieId}`)
             if (response.ok) {
                 let movie = await response.json()
                 setMovie(movie)
@@ -35,28 +35,28 @@ const MovieDetails = () => {
         }
     }
 
-    const getComments = async () => {
-        try {
-            let response = await fetch("https://striveschool-api.herokuapp.com/api/comments/" + params.movieId, {
-                headers: {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiYWMxNTUwMWZlODAwMTU2MGMyMTIiLCJpYXQiOjE2NzUzNDA4MjIsImV4cCI6MTY3NjU1MDQyMn0.dNhuX-b-VsYhfD6A0twErLiNz3kOKX37djHyFrKqtP0"
-                }
-            })
-            if (response.ok) {
-                let comments = await response.json()
-                setComments(comments)
-                setIsLoading(false)
-            } else {
-                setIsError(true)
-                setIsLoading(false)
-            }
+    // const getComments = async () => {
+    //     try {
+    //         let response = await fetch("https://striveschool-api.herokuapp.com/api/comments/" + params.movieId, {
+    //             headers: {
+    //                 "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiYWMxNTUwMWZlODAwMTU2MGMyMTIiLCJpYXQiOjE2NzUzNDA4MjIsImV4cCI6MTY3NjU1MDQyMn0.dNhuX-b-VsYhfD6A0twErLiNz3kOKX37djHyFrKqtP0"
+    //             }
+    //         })
+    //         if (response.ok) {
+    //             let comments = await response.json()
+    //             setComments(comments)
+    //             setIsLoading(false)
+    //         } else {
+    //             setIsError(true)
+    //             setIsLoading(false)
+    //         }
 
-        } catch {
-            setIsError(true)
-            setIsLoading(false)
+    //     } catch {
+    //         setIsError(true)
+    //         setIsLoading(false)
 
-        }
-    }
+    //     }
+    // }
     return (
         <Container fluid>
             <div className="align-container">
@@ -64,17 +64,13 @@ const MovieDetails = () => {
                 {isError && <Alert className="error" variant="danger">Oww snap...<BugFill /> </Alert>}
                 {movie ?
                     <div className="d-flex my-5">
-                        <img src={movie.Poster} alt="Movie Poster" />
+                        <img src={movie.poster} alt="Movie Poster" />
                         <div className="text-white ml-lg-5">
-                            <h2 className="mb-4">{movie.Title}</h2>
-                            <p>Released: {movie.Released}</p>
-                            <p>Genre: {movie.Genre}</p>
-                            <p>Language: {movie.Language}</p>
-                            <p>Cast: {movie.Actors}</p>
-                            <p>Writer: {movie.Writer}</p>
-                            <p>Rating: {movie.imdbRating}</p>
+                            <h2 className="mb-4">{movie.title}</h2>
+                            <p>Year: {movie.year}</p>
+                            <p>Type: {movie.type}</p>
                         </div>
-                        <div className="text-white ml-auto">
+                        {/* <div className="text-white ml-auto">
                             <h2>Comments:</h2>
                             {comments ?
                                 <ListGroup>
@@ -83,7 +79,7 @@ const MovieDetails = () => {
                                     })}
                                 </ListGroup> : <h6>No Comments</h6>}
                             {(comments === null || comments.length === 0) && <h6>No comments available</h6>}
-                        </div>
+                        </div> */}
                     </div>
                     : ""}
             </div>

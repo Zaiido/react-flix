@@ -16,7 +16,7 @@ class TrendingNowSection extends Component {
                             <Carousel interval={null} indicators={false}>
                                 <Carousel.Item>
                                     <Row className="movies-container">
-                                        <BuildingGallery query="james%20bond" />
+                                        <BuildingGallery query="lord of the rings" />
                                     </Row>
                                 </Carousel.Item>
                                 <Carousel.Item>
@@ -26,7 +26,7 @@ class TrendingNowSection extends Component {
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <Row className="movies-container">
-                                        <BuildingGallery query="harry%20potter" />
+                                        <BuildingGallery query="harry potter" />
                                     </Row>
                                 </Carousel.Item>
                             </Carousel>

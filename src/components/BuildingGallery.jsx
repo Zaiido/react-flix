@@ -3,7 +3,6 @@ import { Alert, Button, Card, Col, Spinner } from "react-bootstrap";
 import { PlusLg, HandThumbsUp, ChevronDown, VolumeUp, BugFill } from "react-bootstrap-icons";
 import routerWrapper from "../helper/routerWrapper";
 
-
 class BuildingGallery extends Component {
     state = {
         movies: [],
@@ -11,6 +10,11 @@ class BuildingGallery extends Component {
         isError: false
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.movies !== prevState.movies) {
+            console.log(this.state.movies);
+        }
+    }
 
     componentDidMount() {
         this.getMovies()
@@ -18,11 +22,11 @@ class BuildingGallery extends Component {
 
     getMovies = async () => {
         try {
-            let response = await fetch("http://www.omdbapi.com/?apikey=f26f50a5&s=" + this.props.query);
+            let response = await fetch(`${process.env.REACT_APP_BE_URL}/medias?title=${this.props.query}`);
 
             if (response.ok) {
-                let movies = await response.json()
-                this.setState({ movies: movies.Search, isLoading: false })
+                let media = await response.json()
+                this.setState({ movies: media, isLoading: false })
             } else {
                 this.setState({ isError: true, isLoading: false })
             }
@@ -41,9 +45,9 @@ class BuildingGallery extends Component {
 
                         <Col className="col-12 col-sm-6 col-md-4 col-lg-2 movie-img" key={movie.imdbID}>
                             <Card className="border-0">
-                                <Card.Img variant="top" src={movie.Poster} />
+                                <Card.Img variant="top" src={movie.poster} />
                                 <Card.Body>
-                                    <Card.Title className="movie-title">{movie.Title}</Card.Title>
+                                    <Card.Title className="movie-title">{movie.title}</Card.Title>
                                     <div className="volume">
                                         <VolumeUp />
                                     </div>
@@ -79,3 +83,4 @@ class BuildingGallery extends Component {
 }
 
 export default routerWrapper(BuildingGallery)
+

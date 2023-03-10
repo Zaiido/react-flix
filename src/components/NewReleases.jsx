@@ -18,12 +18,12 @@ class NewReleases extends Component {
                             </Carousel.Item>
                             <Carousel.Item>
                                 <Row className="movies-container">
-                                    <BuildingGallery query="star%20wars" />
+                                    <BuildingGallery query="star wars" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <Row className="movies-container">
-                                    <BuildingGallery query="iron%20man" />
+                                    <BuildingGallery query="iron man" />
                                 </Row>
                             </Carousel.Item>
                         </Carousel>

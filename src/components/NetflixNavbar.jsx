@@ -32,6 +32,9 @@ const NetflixNavbar = () => {
                         <Link>
                             <div className="nav-link">My List</div>
                         </Link>
+                        <Link to={"/backoffice"}>
+                            <div className="nav-link">Backoffice</div>
+                        </Link>
                     </Nav>
                     <Form inline className="ml-auto">
                         {<FormControl type="text" placeholder={location.pathname === "/tv-shows" ? "Search in TV Shows…" : "Search..."} className="mr-sm-2" />}

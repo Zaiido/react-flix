@@ -18,7 +18,7 @@ class WatchItAgain extends Component {
                             </Carousel.Item>
                             <Carousel.Item>
                                 <Row className="movies-container">
-                                    <BuildingGallery query="spider%20man" />
+                                    <BuildingGallery query="spider man" />
                                 </Row>
                             </Carousel.Item>
                             <Carousel.Item>
