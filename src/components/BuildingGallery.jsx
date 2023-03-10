@@ -10,12 +10,6 @@ class BuildingGallery extends Component {
         isError: false
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (this.state.movies !== prevState.movies) {
-            console.log(this.state.movies);
-        }
-    }
-
     componentDidMount() {
         this.getMovies()
     }
