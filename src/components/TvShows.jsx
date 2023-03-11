@@ -54,7 +54,7 @@ class TvShows extends Component {
                             </Carousel.Item>
                             <Carousel.Item>
                                 <Row className="movies-container">
-                                    <BuildingGallery query="breaking bad" />
+                                    <BuildingGallery query="ice age" />
                                 </Row>
                             </Carousel.Item>
                         </Carousel>
