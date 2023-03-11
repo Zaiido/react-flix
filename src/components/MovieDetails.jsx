@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Alert, Container, Spinner } from "react-bootstrap"
 import { BugFill } from "react-bootstrap-icons"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 const MovieDetails = () => {
     const params = useParams()
@@ -69,6 +69,7 @@ const MovieDetails = () => {
                             <h2 className="mb-4">{movie.title}</h2>
                             <p>Year: {movie.year}</p>
                             <p>Type: {movie.type}</p>
+                            <Link className="btn btn-primary" to={`${process.env.REACT_APP_BE_URL}/medias/${params.movieId}/pdf`}>Download PDF</Link>
                         </div>
                         {/* <div className="text-white ml-auto">
                             <h2>Comments:</h2>
